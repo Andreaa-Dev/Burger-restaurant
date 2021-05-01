@@ -12,7 +12,7 @@ function Introduction() {
       <h1>Welcome to burger heaven !!!</h1>
       <p>
         We are happy to bring the best food to you with our special home-made
-        sauce and fresh ingredients. Order{" "}
+        sauce and fresh ingredients. Order
       </p>
     </Text>
   );
