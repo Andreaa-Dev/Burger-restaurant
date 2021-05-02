@@ -1,4 +1,5 @@
 # Yummy Yummy restaurant
 
-<img src = "file:///Users/andrea/Desktop/Yummy%20Yummy%20Restaurant.png">
-s
+practice Redux
+
+![Burger restaurant](https://user-images.githubusercontent.com/73385243/116810856-bc4e9f00-ab4e-11eb-8428-4881af3a9fd3.png)
