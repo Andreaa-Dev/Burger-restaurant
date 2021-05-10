@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Home from "./Home";
 
 import CartButton from "./CartButton";
 
@@ -22,6 +23,7 @@ function NavBar() {
   return (
     <div>
       <NavStyle>
+        <Home />
         <Title>Burger Heaven</Title>
         <CartButton />
       </NavStyle>

@@ -10,6 +10,7 @@ const AppStyle = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
 function App() {
   return (
     <AppStyle>

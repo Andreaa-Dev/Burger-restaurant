@@ -10,7 +10,6 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-import grey from "@material-ui/core/colors/grey";
 
 const styles = (theme) => ({
   root: {
@@ -46,6 +45,8 @@ const DialogTitle = withStyles(styles)((props) => {
 const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
+    height: 100,
+    width: 500,
   },
 }))(MuiDialogContent);
 
@@ -78,14 +79,14 @@ export default function CartOrder() {
     total += itemPrice;
     return (
       <Typography gutterBottom>
-        <div> {item.name}</div>
+        <b> {item.name}</b>
         <div>
           {item.price} x {item.amount} = {itemPrice} $
         </div>
       </Typography>
     );
   });
-
+  const finalTotal = total + 7.9;
   return (
     <div>
       <Button color="grey[50]" onClick={handleClickOpen}>
@@ -100,8 +101,12 @@ export default function CartOrder() {
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           Your order
         </DialogTitle>
-        <DialogContent dividers>{items}</DialogContent>
-        <p>Total: {total}$</p>
+        <DialogContent dividers>
+          {items}
+          <p>Delivery = 7.9$</p>
+        </DialogContent>
+
+        <p>Total: {finalTotal} $</p>
         <DialogActions>
           <Button autoFocus onClick={handleClose} color="primary">
             Go to pay

@@ -3,56 +3,86 @@ import styled from "styled-components";
 import phone from "../Imagine/phone.png";
 import email from "../Imagine/email.png";
 import address from "../Imagine/address.png";
+import facebook from "../Imagine/facebook.png";
+import instagram from "../Imagine/instagram.png";
 
 const FooterCard = styled.div`
   color: black;
   background-color: white;
-  width: 80vw;
+  width: 60vw;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const FooterSmall = styled.div`
   display: flex;
   flex-direction: table;
-  justify-content: space-around;
+  justify-content: space-evenly;
+`;
+const OpeningHour = styled.div`
+  margin-right: 5rem;
 `;
 
-const ContactCard = styled.div`
+const Card = styled.div`
   display: flex;
   flex-direction: table;
   align-items: center;
+  height: 2rem;
+`;
+
+const Title = styled.div`
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+`;
+
+const Text = styled.p`
+  margin-left: 0.5rem;
+`;
+const Li = styled.li`
+  margin: 0.1rem auto auto 0.1rem;
+`;
+
+const Img = styled.img`
+  margin-left: 0.5rem;
 `;
 
 function Footer() {
   return (
     <FooterCard>
       <FooterSmall>
-        <div>
-          <p>Our opening hours:</p>
+        <OpeningHour>
+          <Title>Our opening hours:</Title>
           <ul>
-            <li>Mon: 11:00 – 14:00</li>
-            <li>Tue – Fri: 11:00 – 20:00</li>
-            <li>Sat: 17:00 – 21:00</li>
-            <li>Sun:Close</li>
+            <Li>Tue – Fri: 11:00 – 20:00</Li>
+            <Li>Sat: 17:00 – 21:00</Li>
+            <Li>
+              Mon, Sun:<b>Close</b>
+            </Li>
           </ul>
-        </div>
+        </OpeningHour>
         <div>
-          <p>Contact information</p>
-          <ContactCard>
-            <img src={phone} height="30rem" width="30rem" alt="error" />
-            <p>+358 123 45678</p>
-          </ContactCard>
-          <ContactCard>
-            <img src={email} height="30rem" width="30rem" alt="error" />
-            <p>burgerHeaven@gmail.com</p>
-          </ContactCard>
-          <ContactCard>
-            <img src={address} height="30rem" width="30rem" alt="error" />
-            <p>Kivihaantie 3 , 00310, Helsinki</p>
-          </ContactCard>
+          <Title>Contact information</Title>
+          <Card>
+            <img src={phone} height="20rem" width="20rem" alt="error" />
+            <Text>+358 123 45678</Text>
+          </Card>
+          <Card>
+            <img src={email} height="20rem" width="20rem" alt="error" />
+            <Text>burgerHeaven@gmail.com</Text>
+          </Card>
+          <Card>
+            <img src={address} height="20rem" width="20rem" alt="error" />
+            <Text>Kivihaantie 3 , 00310, Helsinki</Text>
+          </Card>
         </div>
       </FooterSmall>
-
-      <div>Follow us</div>
+      <Card>
+        <Title>Follow us on :</Title>
+        <Img src={facebook} height="20rem" width="20rem" alt="error" />
+        <Img src={instagram} height="20rem" width="20rem" alt="error" />
+      </Card>
     </FooterCard>
   );
 }
