@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
@@ -85,8 +87,16 @@ export default function Home() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose}>Menu</MenuItem>
-                    <MenuItem onClick={handleClose}>Reservation</MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link to="/">HOME</Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link to="/menu">Menu</Link>
+                    </MenuItem>
+
+                    <MenuItem onClick={handleClose}>
+                      <Link to="/reservation">Reservation</Link>
+                    </MenuItem>
                     <MenuItem onClick={handleClose}>Contact</MenuItem>
                   </MenuList>
                 </ClickAwayListener>

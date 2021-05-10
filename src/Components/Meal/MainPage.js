@@ -1,15 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Introduction from "./Introduction";
 import { useSelector } from "react-redux";
 
 import MenuCard from "./MenuCard";
 
-function Menu() {
+function MainPage() {
   const MenuItems = useSelector((state) => {
     return state.orderReducer;
   });
 
   const items = MenuItems.map((item) => <MenuCard item={item} />);
-  return <div>{items}</div>;
+  return (
+    <div>
+      <Introduction />
+      {items}
+    </div>
+  );
 }
 
-export default Menu;
+export default MainPage;

@@ -11,7 +11,6 @@ const Card = styled.div`
   background-color: white;
   width: 70vw;
   margin-bottom: 1rem;
-  font-family: "Open Sans", sans-serif;
 `;
 const Column1 = styled.div`
   display: flex;
