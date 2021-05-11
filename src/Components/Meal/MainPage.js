@@ -7,7 +7,7 @@ import MenuCard from "./MenuCard";
 
 function MainPage() {
   const MenuItems = useSelector((state) => {
-    return state.orderReducer;
+    return state.orderReducer.menuItems;
   });
 
   const items = MenuItems.map((item) => <MenuCard item={item} />);

@@ -1,7 +1,5 @@
 import React from "react";
 
-import styled from "styled-components";
-
 import "date-fns";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
@@ -10,11 +8,6 @@ import {
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
-
-const Text = styled.p`
-  margin: 1rem auto auto 18rem;
-  font-weight: bold;
-`;
 
 export default function Timetable() {
   // The first commit of Material-UI
@@ -28,7 +21,6 @@ export default function Timetable() {
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Text>Please choose your date and time here:</Text>
       <Grid container justify="space-around">
         <KeyboardDatePicker
           margin="normal"

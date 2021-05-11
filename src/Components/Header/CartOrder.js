@@ -67,7 +67,7 @@ export default function CartOrder() {
   };
 
   const MenuItems = useSelector((state) => {
-    return state.orderReducer;
+    return state.orderReducer.menuItems;
   });
 
   let total = 0;

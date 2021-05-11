@@ -30,7 +30,7 @@ const ButtonNumber = styled.button`
 
 function CartButton() {
   const MenuItems = useSelector((state) => {
-    return state.orderReducer;
+    return state.orderReducer.menuItems;
   });
   console.log(MenuItems);
   const totalOrder = MenuItems.reduce((acc, current) => {

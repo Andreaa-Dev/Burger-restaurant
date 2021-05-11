@@ -97,7 +97,9 @@ export default function Home() {
                     <MenuItem onClick={handleClose}>
                       <Link to="/reservation">Reservation</Link>
                     </MenuItem>
-                    <MenuItem onClick={handleClose}>Contact</MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <Link to="/about">About</Link>
+                    </MenuItem>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
